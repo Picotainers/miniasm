@@ -37,7 +37,7 @@ jobs:
           context: .
           file: ./Dockerfile
           push: true
-          tags: picotainers/miniasm:latest
+          tags: docker.io/picotainers/miniasm:latest
 
       - name: Image digest
         run: echo ${{ steps.docker_build.outputs.digest }}
