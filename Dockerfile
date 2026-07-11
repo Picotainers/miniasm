@@ -23,5 +23,5 @@ RUN make CFLAGS="-O2 -static" \
 FROM scratch
 COPY --from=builder /tmp/miniasm /usr/local/bin/miniasm
 WORKDIR /data
-ENV PATH="/usr/local/bin"
-CMD ["miniasm", "--help"]
+ENTRYPOINT ["/usr/local/bin/miniasm"]
+CMD []
